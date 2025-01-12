@@ -1,4 +1,5 @@
 """Config flow for Garmin Connect integration."""
+
 import logging
 
 from garminconnect import (
@@ -17,7 +18,9 @@ from .const import DOMAIN
 _LOGGER = logging.getLogger(__name__)
 
 
-class GarminConnectConfigFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
+class GarminConnectYearlyElevationGainConfigFlowHandler(
+    config_entries.ConfigFlow, domain=DOMAIN
+):
     """Handle a config flow for Garmin Connect."""
 
     VERSION = 1
@@ -27,7 +30,10 @@ class GarminConnectConfigFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
         return self.async_show_form(
             step_id="user",
             data_schema=vol.Schema(
-                {vol.Required(CONF_USERNAME): str, vol.Required(CONF_PASSWORD): str}
+                {
+                    vol.Required(CONF_USERNAME): str,
+                    vol.Required(CONF_PASSWORD): str,
+                }
             ),
             errors=errors or {},
         )

@@ -1,12 +1,17 @@
 {
-  "domain": "garmin_connect",
-  "name": "Garmin Connect",
-  "codeowners": ["@cyberjunky"],
+  "domain": "garmin_connect_yearly_elevation_gain",
+  "name": "Garmin Connect Yearly Elevation Gain",
+  "codeowners": [
+    "@lud-hu"
+  ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/cyberjunky/home-assistant-garmin_connect",
+  "documentation": "https://github.com/lud-hu/home-assistant-garmin_connect",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/cyberjunky/home-assistant-garmin_connect/issues",
-  "requirements": ["garminconnect>=0.2.24", "tzlocal"],
+  "issue_tracker": "https://github.com/lud-hu/home-assistant-garmin_connect/issues",
+  "requirements": [
+    "garminconnect>=0.2.24",
+    "tzlocal"
+  ],
   "version": "0.2.26"
 }
